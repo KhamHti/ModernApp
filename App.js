@@ -26,11 +26,13 @@ const App = () => {
       MontserratMedium: require("./assets/fonts/Montserrat-Medium.ttf"),
       MontserratRegular: require("./assets/fonts/Montserrat-Regular.ttf"),
       MontserratSemiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
-  });
+  })
+
+  if (!loaded) return null;
 
   return (
     <NavigationContainer theme={theme}>
-      <Stack.Navigator initialRouteName="Home" >
+      <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Home" >
         <Stack.Screen name='Home' component={Home} />
         <Stack.Screen name='Details' component={Details} />
       </Stack.Navigator>
