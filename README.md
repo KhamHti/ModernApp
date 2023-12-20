@@ -8,3 +8,4 @@ npm run android
 
 ## For IOS
 npm run ios
+gg asdf
